@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ANOKHA REGISTRATION FORM</title>
+<link rel="icon"
+      href="https://play-lh.googleusercontent.com/Nw6kWAnggSqCPVQOXJx3IgYVfWAg6G3-Z2-v7RCreGl1kGH5mMd_zJ3jxcQJjApoYno">
+</head>
+<body>
+<style>
+    body {
+  background-image: linear-gradient(135deg, #D0482A 10%, #1904E5 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Open Sans", sans-serif;
+  color: #333333;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 10%;
+}
+.box-form .left {
+  color: #FFFFFF;
+  background-size: 600px;
+  background-repeat: no-repeat;
+  background-image: url("https://dt19wmazj2dns.cloudfront.net/wp-content/themes/amrita/images/logo-colored.svg");
+  margin: 10px;
+  overflow: hidden;}
+  
+    #main{width:600px; height:auto; overflow:hidden; padding-bottom:20px; margin-left:auto; margin-right:auto; 
+    border-radius:5px; padding-left:10px; margin-top:100px; border-top:3px double #f1f1f1; 
+    border-bottom:3px double #f1f1f1; padding-top:20px;
+    }
+    
+    #main table{font-family:"Comic Sans MS", cursive;}
+    /* css code for textbox */
+    #main .tb{height:28px; width:230px; border:1px solid #0ab9e1; color:#0b0ff5; font-weight:bold; border-left:5px solid #f7f7f7; opacity:0.9;}
+    
+    #main .tb:focus{height:28px; border:1px solid #f26724; outline:none; border-left:5px solid #f7f7f7;}
+
+    /* css code for button*/
+    #main .btn{width:150px; height:32px; outline:none;  color:#f7f7f7; font-weight:bold; border:0px solid #f26724; 
+    text-shadow: 0px 0.5px 0.5px #fff; border-radius: 2px; font-weight: 600; color: #0cc462; letter-spacing: 1px; 
+    font-size:14px; background-color:#f1f1f1; -webkit-transition: 1s; -moz-transition: 1s; transition: 1s;}
+  
+    #main .btn:hover{
+	background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
+    -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; 
+	}
+  </style>
+<h2 align="center">Anokha registration form</h2>
+
+<script>
+function instruct()
+{
+ document.getElementById("instructions").innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
+}
+</script>
+<p id="instructions"></p>
+<form>
+  <table cellspacing="2" align="center" cellpadding="8" border="0">
+  <tr>
+  <button type="button" onclick="instruct()">WHAT TO DO??</button>
+  </tr>
+  <tr>
+  <td><label for="username">username:</label></td>
+  <td><input type="text" id="username" name="username" value=""></td><br>
+  </tr>
+  <tr>
+  <td><label for="username">university name:</label></td>
+  <td><input type="text" id="username" name="username" value=""></td><br>
+  </tr>
+  <tr>
+  <td><label for="email">university email id:</label></td>
+  <td><input type="email" id="email" name="email"></td><br>
+  </tr>
+  <tr>
+  <td><label for="email">personal email id:</label></td>
+  <td><input type="email" id="email" name="email"></td><br>
+  </tr>
+  <tr>
+  <td><label for="cars">Your batch:</label></td>
+  <td><select name="batch" id="batch">
+    <option value="CYS">CYS</option>
+    <option value="CSE">CSE</option>
+    <option value="AIE">AIE</option>
+    <option value="EEE">EEE</option>
+	<option value="MEC">MEC</option>
+    <option value="AGR">AGR</option>
+  </select></td>
+  </tr>
+  <tr>
+  <td>Gender:</td>
+  <td>
+  <input type="radio" id="male" name="sex" value="MALE">
+  <label for="male">MALE</label>
+  <input type="radio" id="female" name="sex" value="FEMALE">
+  <label for="female">FEMALE</label>
+  <input type="radio" id="other" name="sex" value="OTHER">
+  <label for="other">OTHER</label>
+  </td>
+  </tr>
+  <tr>
+  <td>Languages that you are proficient in:</td>
+  <td>
+  <input type="checkbox" id="lang1" name="lang1" value="python">
+  <label for="lang1"> Python</label><br>
+  <input type="checkbox" id="lang2" name="lang2" value="C++">
+  <label for="lang2"> C++</label><br>
+  <input type="checkbox" id="lang3" name="lang3" value="Java">
+  <label for="lang3"> Java</label>
+  </td>
+  </tr>
+  <tr>
+  <td><p><label for="About me">About me:</label></p></td>
+  <td><textarea id="About me" name="About me" rows="4" cols="50"></textarea></td>
+  </tr>
+  <tr>
+  <td><input type="submit" value="Submit"></td>
+  </tr>
+  <tr>
+  <td><button onclick="window.print()">Print this page</button></td>
+  </tr>
+</form>
+<div class="text">
+        <h5>Already have an account? <a href="#">Login now</a></h5>
+      </div>
+
+</body>
+</html>
