@@ -2,19 +2,22 @@
 <html>
 <head>
 <title>ANOKHA REGISTRATION FORM</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/snackbar.css">
 <link rel="icon"
       href="https://play-lh.googleusercontent.com/Nw6kWAnggSqCPVQOXJx3IgYVfWAg6G3-Z2-v7RCreGl1kGH5mMd_zJ3jxcQJjApoYno">
 </head>
 <body>
 <style>
     body {
-  background-image: linear-gradient(135deg, #D0482A 10%, #1904E5 100%);
+  background-image: linear-gradient(135deg, #D0482A 10%, #F715F3 100%);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Open Sans", sans-serif;
   color: #333333;
 }
+
 .center {
   display: block;
   margin-left: auto;
@@ -49,39 +52,49 @@
 	background-color:#f26724; outline:none;  border-radius: 2px; color:#f1f1f1; border:1px solid #f1f1f1;
     -webkit-transition: 1s; -moz-transition: 1s; transition: 1s; 
 	}
-  </style>
-<h2 align="center">Anokha registration form</h2>
+	table {
+  border: 5px solid black;
+    }
+ </style>
 
-<script>
-function instruct()
-{
- document.getElementById("instructions").innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
-}
-</script>
+<h2 align="center">Anokha registration form</h2>
+<p id="submitted"></P>
+<p align="center">
+<img src="images\Screenshot 2022-11-30 105024.png" width="100">
+</p>
 <p id="instructions"></p>
-<form>
+<p><h5>TURN ON THE TOGGLE BUTTON BELOW TO GET NOTIFICATIONS ABOUT NEW TECH STUFF FROM US:)</h5></p>
+  <label class="switch">
+  <input type="checkbox"></td>
+  <span class="slider round"></span>
+  </label>
+<form onsubmit="return false;">
   <table cellspacing="2" align="center" cellpadding="8" border="0">
   <tr>
-  <button type="button" onclick="instruct()">WHAT TO DO??</button>
+  <td><button type="button" onclick="myFunction()">WHAT TO DO??</button></td>
   </tr>
   <tr>
-  <td><label for="username">username:</label></td>
-  <td><input type="text" id="username" name="username" value=""></td><br>
+  <td><label for="username">Username:</label></td>
+  <td><input onchange="updateName()" type="text" id="username" name="username" value="" required minlength="2" maxlength="40"></td><br>
   </tr>
   <tr>
-  <td><label for="username">university name:</label></td>
-  <td><input type="text" id="username" name="username" value=""></td><br>
+  <td><label for="universityname">University Name:</label></td>
+  <td><input onchange="updateUniversityName()" type="text" id="universityname" name="universityname" value="" required></td><br>
   </tr>
   <tr>
-  <td><label for="email">university email id:</label></td>
-  <td><input type="email" id="email" name="email"></td><br>
+  <td><label for="email">University Email Id:</label></td>
+  <td><input onchange="updateEmail()" type="email" id="email" name="email" required></td><br>
   </tr>
   <tr>
-  <td><label for="email">personal email id:</label></td>
-  <td><input type="email" id="email" name="email"></td><br>
+  <td><label for="password">Password:</label></td>
+  <td><input type="password" id="password" name="password" required></td><br>
   </tr>
   <tr>
-  <td><label for="cars">Your batch:</label></td>
+  <tr>
+  <td><label for="birthday">Birthday:</label></td>
+  <td><input type="date" id="birthday" name="birthday"></td>
+  </tr>
+  <td><label for="batch">Your batch:</label></td>
   <td><select name="batch" id="batch">
     <option value="CYS">CYS</option>
     <option value="CSE">CSE</option>
@@ -94,7 +107,7 @@ function instruct()
   <tr>
   <td>Gender:</td>
   <td>
-  <input type="radio" id="male" name="sex" value="MALE">
+  <input type="radio" id="male" name="sex" value="MALE" required>
   <label for="male">MALE</label>
   <input type="radio" id="female" name="sex" value="FEMALE">
   <label for="female">FEMALE</label>
@@ -114,11 +127,15 @@ function instruct()
   </td>
   </tr>
   <tr>
-  <td><p><label for="About me">About me:</label></p></td>
+  <td><label for="image">Select your profile pic to upload:</label></td>
+  <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
+  </tr>
+  <tr>
+  <td><p><label for="About me">A Little About me:</label></p></td>
   <td><textarea id="About me" name="About me" rows="4" cols="50"></textarea></td>
   </tr>
   <tr>
-  <td><input type="submit" value="Submit"></td>
+  <td><input type="submit" value="Submit" value="Go!" onclick="validate()"></td>
   </tr>
   <tr>
   <td><input type="reset" value="Clear Form"></td>
@@ -126,10 +143,107 @@ function instruct()
   <tr>
   <td><button onclick="window.print()">Print this page</button></td>
   </tr>
+  <tr>
+  <td>
+        <h5>Already have an account? <a href="https://www.amrita.edu/aums/">Login now</a></h5>
+  </td>
+  </tr>
 </form>
-<div class="text">
-        <h5>Already have an account? <a href="#">Login now</a></h5>
-      </div>
+<script>
+function myFunction() {
+  var x = document.getElementById("instructions");
+  if (x.innerHTML === "") {
+    x.innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
+  } else {
+    x.innerHTML = "";
+  }
+}
+function instruct()
+{
+ document.getElementById("instructions").innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
+}
+console.log("Welcome to Anokha-Fest regestration page. Please fill the application form.");
+//document.write("Let's go!!");
 
+//let is only asscisible within the bolck whereas var is asscessible anywhere.
+function validateName()
+{
+let nameLocal;
+nameLocal=document.getElementById("username").value;
+
+console.log("Username: " + nameLocal);
+}
+function validateUniversityName()
+{
+let universityNameLocal;
+universityNameLocal=document.getElementById("universityname").value;
+if (universityNameLocal=="")
+{
+ console.log("error didn't fill the 'university name' field.");
+}
+else{
+ console.log("University name: " + universityNameLocal);
+}
+}
+function validateEmail()
+{
+let emailLocal;
+emailLocal=document.getElementById("email").value;
+if (emailLocal=="")
+{
+ console.log("error didn't fill the email field.");
+}
+else{
+console.log("email: " + emailLocal);
+}
+}
+
+function validate(){
+validateName();
+validateUniversityName();
+validateEmail();
+}
+function updateName()
+{
+let nameLocal1;
+nameLocal1=document.getElementById("username").value;
+console.log("updated Username: " + nameLocal1);
+}
+function updateUniversityName()
+{
+let universityNameLocal1;
+universityNameLocal1=document.getElementById("universityname").value;
+console.log("updated University name: " + universityNameLocal1);
+}
+function updateEmail()
+{
+let emailLocal1;
+emailLocal1=document.getElementById("email").value;
+console.log("updated email: " + emailLocal1);
+}
+</script>
+<script>
+let username = document.getElementById("username");
+username.addEventListener("input", () => {
+  if (username.validity.tooLong || username.validity.tooShort || username.validity.valueMissing) {
+    username.setCustomValidity("Name must be 2-40 characters.");
+    username.reportValidity();
+  } else { username.setCustomValidity(""); }
+});
+let universityname = document.getElementById("universityname");
+universityname.addEventListener("input", () => {
+  if (universityname.validity.tooLong || universityname.validity.tooShort || universityname.validity.valueMissing) {
+    universityname.setCustomValidity("Must fill the university name.");
+    universityname.reportValidity();
+  } else { universityname.setCustomValidity(""); }
+});
+let email = document.getElementById("email");
+email.addEventListener("input", () => {
+  if (email.validity.tooLong || email.validity.tooShort || email.validity.valueMissing) {
+    email.setCustomValidity("Must fill the university email.");
+    email.reportValidity();
+  } else { email.setCustomValidity(""); }
+});
+</script>
 </body>
 </html>
