@@ -1,0 +1,245 @@
+ .u-section-1 {
+  background-image: url("images/images.jpg");
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 830px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 400;
+  width: 251px;
+  margin: 28px auto 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-weight: 400;
+  margin: 41px auto 0;
+}
+
+.u-section-1 .u-custom-html-1 {
+  height: auto;
+  min-height: 30px;
+  margin: 63px 998px 0 55px;
+}
+
+.u-section-1 .u-custom-html-2 {
+  height: auto;
+  min-height: 51px;
+  margin: -30px 857px 0 160px;
+}
+
+.u-section-1 .u-custom-html-3 {
+  height: auto;
+  min-height: 51px;
+  margin: -51px 696px 0 301px;
+}
+
+.u-section-1 .u-custom-html-4 {
+  height: auto;
+  min-height: 51px;
+  margin: -51px 539px 0 445px;
+}
+
+.u-section-1 .u-custom-html-5 {
+  height: auto;
+  min-height: 51px;
+  margin: -51px 406px 0 591px;
+}
+
+.u-section-1 .u-btn-1 {
+  background-image: none;
+  margin: -59px 299px 0 auto;
+}
+
+.u-section-1 .u-table-1 {
+  width: 245px;
+  margin: 80px auto 0 55px;
+}
+
+.u-block-aca7-18 {
+  height: 46px;
+}
+
+.u-section-1 .u-table-cell-1 {
+  border-style: solid;
+  background-image: linear-gradient(to right, #72efe9, #f5f7fa);
+}
+
+.u-block-aca7-32 {
+  height: 46px;
+}
+
+.u-section-1 .u-table-2 {
+  width: 400px;
+  margin: -464px 91px 0 auto;
+}
+
+.u-block-aca7-41 {
+  height: 46px;
+}
+
+.u-section-1 .u-table-cell-11 {
+  background-image: linear-gradient(to right, #e1a418, white);
+}
+
+.u-section-1 .u-table-cell-12 {
+  background-image: linear-gradient(to right, #e1a418, white);
+}
+
+.u-block-aca7-54 {
+  height: 46px;
+}
+
+.u-section-1 .u-btn-2 {
+  background-image: linear-gradient(to right, #478ac9, #2cccc4);
+  border-style: solid;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  box-shadow: 0px 2px 6px 0 rgba(0,0,0,0.25);
+  margin: 154px auto 60px;
+  padding: 8px 36px 9px 35px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 684px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 851px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-right: 757px;
+    margin-left: 60px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 596px;
+    margin-left: 201px;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-right: 439px;
+    margin-left: 345px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 306px;
+    margin-left: 491px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-right: 99px;
+  }
+
+  .u-section-1 .u-table-1 {
+    height: 464px;
+  }
+
+  .u-section-1 .u-table-2 {
+    height: 186px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 524px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 631px;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-right: 597px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 486px;
+    margin-left: 91px;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-right: 329px;
+    margin-left: 235px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 196px;
+    margin-left: 381px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 393px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 451px;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-right: 417px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 396px;
+    margin-left: 1px;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-right: 239px;
+    margin-left: 145px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 106px;
+    margin-left: 291px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 247px;
+  }
+
+  .u-section-1 .u-custom-html-1 {
+    margin-right: 251px;
+  }
+
+  .u-section-1 .u-custom-html-2 {
+    margin-right: 217px;
+  }
+
+  .u-section-1 .u-custom-html-3 {
+    margin-right: 197px;
+    margin-left: 0;
+  }
+
+  .u-section-1 .u-custom-html-4 {
+    margin-right: 139px;
+    margin-left: 45px;
+  }
+
+  .u-section-1 .u-custom-html-5 {
+    margin-right: 6px;
+    margin-left: 191px;
+  }
+
+  .u-section-1 .u-table-2 {
+    width: 340px;
+    margin-right: 0;
+  }
+}
