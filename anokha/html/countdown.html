@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>ANOKHA TECH FEST</title>
+<link rel="icon"
+      href="https://play-lh.googleusercontent.com/Nw6kWAnggSqCPVQOXJx3IgYVfWAg6G3-Z2-v7RCreGl1kGH5mMd_zJ3jxcQJjApoYno">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 60px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body style='background: url("../images/back.png");background-repeat: no-repeat;background-size: cover'>
+<body>	  
+<h1 align="center" style="color:red;">Time till anokha fest starts:</h1><br>
+<p style="color:red;" id="demo"></p>
+
+<script>
+var countDownDate = new Date("Jan 31, 2023 15:00:00").getTime();
+
+var x = setInterval(function() {
+
+  var now = new Date().getTime();
+
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+</body>
+<body>
+ <p align="center"><a href="../index.html"><img src="../images/come.png" width="500"></a></p>
+</body>
+</html>

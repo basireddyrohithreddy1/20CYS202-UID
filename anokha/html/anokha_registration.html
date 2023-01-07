@@ -58,18 +58,19 @@
 <p style="color:purple"><h1 style="color:purple" align="center">Anokha registration form</h1></p>
 <p id="submitted"></P>
 <p align="center">
-<img src="../images/Screenshot 2022-11-30 105024.png" width="100">
+<img src="../images/Screenshot 2022-11-30 105024.png" width="200">
 </p>
 <p id="instructions"></p>
+<!--
 <p><h5>TURN ON THE TOGGLE BUTTON BELOW TO GET NOTIFICATIONS ABOUT NEW TECH STUFF FROM US:)</h5></p>
   <label class="switch">
   <input type="checkbox"></td>
   <span class="slider round"></span>
-  </label>
+  </label>-->
 <form onsubmit="return false;">
   <table cellspacing="2" align="center" cellpadding="8" border="0">
   <tr>
-  <td><button type="button" onclick="myFunction()">WHAT TO DO??</button></td>
+  <td><button type="button" onclick="myFunction()">CLICK ME FOR INSTRUCTIONS</button></td>
   </tr>
   <tr>
   <td><label for="username">Username:</label></td>
@@ -151,7 +152,7 @@
 function myFunction() {
   var x = document.getElementById("instructions");
   if (x.innerHTML == "") {
-    x.innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
+    x.innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023. STUDENTS OF UNIVERSITIES OTHER THAN AMRITA WILL HAVE A REGISTRATION FEE OF RS.700.";
   } else {
     x.innerHTML = "";
   }
@@ -159,7 +160,7 @@ function myFunction() {
 function instruct()
 {
  document.getElementById("instructions").innerHTML = 
- "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023.";
+ "HELLO!STUDENTS OF UNIVERSITIES OTHER THAN AMRITA WILL HAVE A FEE OF RS.700.";
 }
 console.log("Welcome to Anokha-Fest regestration page. Please fill the application form.");
 //document.write("Let's go!!");
