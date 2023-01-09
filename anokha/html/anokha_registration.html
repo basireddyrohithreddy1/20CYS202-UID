@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ANOKHA REGISTRATION FORM</title>
 <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/popup.css">
 <link rel="icon"
-      href="https://play-lh.googleusercontent.com/Nw6kWAnggSqCPVQOXJx3IgYVfWAg6G3-Z2-v7RCreGl1kGH5mMd_zJ3jxcQJjApoYno">
+      href="../images/logo.png">
 </head>
 <body>
 <style>
     body {
-  background-image: linear-gradient(135deg, #D0482A 10%, #F715F3 100%);
+  background-image: url("../images/back1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -54,114 +56,163 @@
 	table {
   border: 5px solid black;
     }
- </style>
-<p style="color:purple"><h1 style="color:purple" align="center">Anokha registration form</h1></p>
-<p id="submitted"></P>
-<p align="center">
-<img src="../images/Screenshot 2022-11-30 105024.png" width="200">
-</p>
-<p id="instructions"></p>
-<!--
-<p><h5>TURN ON THE TOGGLE BUTTON BELOW TO GET NOTIFICATIONS ABOUT NEW TECH STUFF FROM US:)</h5></p>
-  <label class="switch">
-  <input type="checkbox"></td>
-  <span class="slider round"></span>
-  </label>-->
-<form onsubmit="return false;">
-  <table cellspacing="2" align="center" cellpadding="8" border="0">
-  <tr>
-  <td><button type="button" onclick="myFunction()">CLICK ME FOR INSTRUCTIONS</button></td>
-  </tr>
-  <tr>
-  <td><label for="username">Username:</label></td>
-  <td><input onchange="updateName()" type="text" id="username" name="username" value="" required minlength="2" maxlength="40"></td><br>
-  </tr>
-  <tr>
-  <td><label for="universityname">University Name:</label></td>
-  <td><input onchange="updateUniversityName()" type="text" id="universityname" name="universityname" value="" required minlength="5" maxlength="50"></td><br>
-  </tr>
-  <tr>
-  <td><label for="email">University Email Id:</label></td>
-  <td><input onchange="updateEmail()" type="email" id="email" name="email" required></td><br>
-  </tr>
-  <tr>
-  <td><label for="password">Password:</label></td>
-  <td><input type="password" id="password" name="password" required></td><br>
-  </tr>
-  <tr>
-  <tr>
-  <td><label for="birthday">Birthday:</label></td>
-  <td><input type="date" id="birthday" name="birthday"></td>
-  </tr>
-  <td><label for="batch">Your batch:</label></td>
-  <td><select name="batch" id="batch">
-    <option value="CYS">CYS</option>
-    <option value="CSE">CSE</option>
-    <option value="AIE">AIE</option>
-    <option value="EEE">EEE</option>
-	<option value="MEC">MEC</option>
-    <option value="AGR">AGR</option>
-  </select></td>
-  </tr>
-  <tr>
-  <td>Gender:</td>
-  <td>
-  <input type="radio" id="male" name="sex" value="MALE">
-  <label for="male">MALE</label>
-  <input type="radio" id="female" name="sex" value="FEMALE">
-  <label for="female">FEMALE</label>
-  <input type="radio" id="other" name="sex" value="OTHER">
-  <label for="other">OTHER</label>
-  </td>
-  </tr>
-  <tr>
-  <td>Languages that you are proficient in:</td>
-  <td>
-  <input type="checkbox" id="lang1" name="lang1" value="python">
-  <label for="lang1"> Python</label><br>
-  <input type="checkbox" id="lang2" name="lang2" value="C++">
-  <label for="lang2"> C++</label><br>
-  <input type="checkbox" id="lang3" name="lang3" value="Java">
-  <label for="lang3"> Java</label>
-  </td>
-  </tr>
-  <tr>
-  <td><label for="image">Select your profile pic to upload:</label></td>
-  <td><input type="file" name="fileToUpload" id="fileToUpload"></td>
-  </tr>
-  <tr>
-  <td><p><label for="About me">A Little About me:</label></p></td>
-  <td><textarea id="About me" name="About me" rows="4" cols="50"></textarea></td>
-  </tr>
-  <tr>
-  <td><input type="submit" value="Submit" value="Go!" onclick="validate()"></td>
-  </tr>
-  <tr>
-  <td><input type="reset" value="Clear Form"></td>
-  </tr>
-  <tr>
-  <td><button onclick="window.print()">Print this page</button></td>
-  </tr>
-  <tr>
-  <td>
-        <h5>Already have an account? <a href="anokha_login.html">Login now</a></h5>
-  </td>
-  </tr>
-</form>
+	
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: black;
+  color: white;
+}
+</style>
+</body>
+<body>
+	<p style="color:purple"><h1 style="color:purple" align="center">Anokha Registration Form</h1></p>
+	<p id="submitted"></P>
+	<p align="center">
+		<img src="../images/Screenshot 2022-11-30 105024.png" width="200">
+	</p>
+	<div class="popup" id="popup1">
+      <h2 style="color:red;" align="center"  >LISTEN UP!!</h2>
+	  <p>Amrita students will be able to login to the Anokha Tech Fest using their AUMS credentials directly.<br><br> <b>NON-AMRITIANS NEED TO REGISTER HERE TO LOGIN.</b>.</p>
+	  <p>There is a registration fee of <b>500</b> Ruppees.</p><p>Thank you for participating.</P>
+	  <a style="text-decoration:none;" href="#" onclick="hide('popup1')"><p align="center" style="color:red;">Click me to close</p></a>
+	</div>
+	<form onsubmit="return false;">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+		<tr>
+			<td>
+				<button type="button" value="submit" onclick="show('popup1')">Instructions</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label class="required-field" for="username">Username:</label>
+			</td>
+			<td>
+				<input onchange="updateName()" type="text" id="username" name="username" value="" required minlength="2" maxlength="40">
+			</td>
+			<br>
+		</tr>
+		<tr>
+			<td>
+				<label class="required-field" for="universityname">University Name:</label>
+			</td>
+			<td>
+				<input onchange="updateUniversityName()" type="text" id="universityname" name="universityname" value="" required minlength="5" maxlength="50">
+			</td>
+			<br>
+		</tr>
+		<tr>
+			<td>
+				<label class="required-field" for="email">University Email Id:</label>
+			</td>
+			<td>
+				<input onchange="updateEmail()" type="email" id="email" name="email" required>
+			</td>
+			<br>
+		</tr>
+		<tr>
+			<td>
+				<label class="required-field" for="password">Password:</label>
+			</td>
+			<td>
+				<input type="password" id="password" name="password" required><input type="button" id="show1" value="show" onclick="showPassword()">
+			</td>
+			<br>
+		</tr>
+		<tr>
+			<td>
+				<label class="required-field" for="password1">Confirm Password:</label>
+			</td>
+			<td>
+				<input type="password" id="password1" name="password1" required><input type="button" id="show2" value="show" onclick="showPassword1()">
+			</td>
+			<br>
+		</tr>
+		<tr>
+			<tr>
+				<td>
+					<label for="birthday">Birthday:</label>
+				</td>
+				<td>
+					<input type="date" id="birthday" name="birthday">
+				</td>
+			</tr>
+			<td>
+				<label for="batch">Your batch:</label>
+			</td>
+			<td>
+				<select name="batch" id="batch">
+					<option value="CYS">CYS</option>
+					<option value="CSE">CSE</option>
+					<option value="AIE">AIE</option>
+					<option value="EEE">EEE</option>
+					<option value="MEC">MEC</option>
+					<option value="AGR">AGR</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Gender:</td>
+			<td>
+				<input type="radio" id="male" name="sex" value="MALE">
+				<label for="male">MALE</label>
+				<input type="radio" id="female" name="sex" value="FEMALE">
+				<label for="female">FEMALE</label>
+				<input type="radio" id="other" name="sex" value="OTHER">
+				<label for="other">OTHER</label>
+			</td>
+		</tr>
+		<tr>
+			<td>Languages that you are proficient in:</td>
+			<td>
+				<input type="checkbox" id="lang1" name="lang1" value="python">
+				<label for="lang1"> Python</label><br>
+				<input type="checkbox" id="lang2" name="lang2" value="C++">
+				<label for="lang2"> C++</label><br>
+				<input type="checkbox" id="lang3" name="lang3" value="Java">
+				<label for="lang3"> Java</label>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<label for="image">Select your profile pic to upload:</label>
+			</td>
+			<td>
+				<input type="file" name="fileToUpload" id="fileToUpload">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<p><label for="About me">A Little About me:</label></p>
+			</td>
+			<td>
+				<textarea id="About me" name="About me" rows="4" cols="50"></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<input class="button-33" type="reset" value="Clear Form">
+			</td>
+			<td>
+				<input class="button-33" type="submit" value="Submit" value="Go!" onclick="validate()">
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button class="button-33" onclick="window.print()">Print this page</button>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<h5>Already have an account? <a href="anokha_login.html">Login now</a></h5>
+			</td>
+		</tr>
+	</table>
+	</form>
+</body>
+<body>
 <script>
-function myFunction() {
-  var x = document.getElementById("instructions");
-  if (x.innerHTML == "") {
-    x.innerHTML = "HELLO! JUST FILL THE FOLLOWING FORM TO PARTICIPATE IN ANOKHA FEST 2023. STUDENTS OF UNIVERSITIES OTHER THAN AMRITA WILL HAVE A REGISTRATION FEE OF RS.700.";
-  } else {
-    x.innerHTML = "";
-  }
-}
-function instruct()
-{
- document.getElementById("instructions").innerHTML = 
- "HELLO!STUDENTS OF UNIVERSITIES OTHER THAN AMRITA WILL HAVE A FEE OF RS.700.";
-}
 console.log("Welcome to Anokha-Fest regestration page. Please fill the application form.");
 //document.write("Let's go!!");
 
@@ -205,19 +256,25 @@ function validatePassword()
 {
 let password;
 password=document.getElementById("password").value;
-if (password=="")
+let password1;
+password1=document.getElementById("password1").value;
+if(password=="")
 {
- console.log("error didn't fill the email field.");
- return false
+return false
+}
+if (password==password1)
+{
+ return true
 }
 else{
-console.log("password: " + password);
-return true
+alert("Your passwords are not the same. Check again.")
+document.getElementById("password1").value="";
+return false
 }
 }
 
 function validate(){
-if (valsub1() && validatePassword())
+if (valsub1() && validateUniversityName() && validateEmail() && validatePassword())
 {
 alert("Your form is registered. Try logging in.");
 }
@@ -264,6 +321,38 @@ email.addEventListener("input", () => {
 });
 </script>
 <script>
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+</script>
+<script>
+function showPassword() {
+  var x = document.getElementById("password");
+  if (x.type === "password") {
+    x.type = "text";
+	document.getElementById("show1").value="hide";
+  } else {
+    x.type = "password";
+	document.getElementById("show1").value="show";
+  }
+}
+function showPassword1() {
+  var x = document.getElementById("password1");
+  if (x.type === "password") {
+    x.type = "text";
+	document.getElementById("show2").value="hide";
+  } else {
+    x.type = "password";
+	document.getElementById("show2").value="show";
+  }
+}
 function valsub1()
 {
 var x=0;
@@ -293,5 +382,11 @@ email.addEventListener("input", () => {
 });
 return true}
 </script>
+	<footer>
+		<p>Copyright © 2022 - TIFAC-CORE in Cyber Security.<br>
+        Design by Basi Reddy Rohith Reddy, II B.Tech CSE (CYS)<br>
+		Part of 20CYS202 - User Interface Design<br>
+		Amrita Vishwa Vidyapeetham, Coimbatore</p>
+	</footer>
 </body>
 </html>

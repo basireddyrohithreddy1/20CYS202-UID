@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Anokha Login</title>
    <link rel="icon"
-      href="https://play-lh.googleusercontent.com/Nw6kWAnggSqCPVQOXJx3IgYVfWAg6G3-Z2-v7RCreGl1kGH5mMd_zJ3jxcQJjApoYno">
+      href="../images/logo.png">
  <link rel="stylesheet" href="style.css">
  <script src="https://kit.fontawesome.com/2b070e02a1.js" crossorigin="anonymous"></script>
 </head>
@@ -21,7 +21,10 @@
 body{
  height: 100vh;
  width: 100%;
- background: linear-gradient(45deg , #E91E63, #42A5F5);
+ background-image: url("../images/back1.png");
+   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 .container{
  display: flex;
@@ -153,36 +156,51 @@ footer {
   background-color: #333;
   color: white;
 }
+
+	footer {
+	text-align: center;
+	padding: 3px;
+	background-color: black;
+	color: white;
+	}
 </style>
 <body>
-<h1 align="center" style="color:#F06292">Anokha Login</h1>
- <div class="container">
- <div class="login-box">
- <div class="user-icon">
- <i class="far fa-user"></i>
- </div>
- <form class="login">
- <div class="form-group">
- <input type="text" placeholder="University Email ID" id="username" class="form-control" required>
- </div>
- <div class="form-group">
- <input type="password" placeholder="Password" id="password" class="form-control" required>
- </div>
- <div class="form-group">
- <label for="rememberme">
- <input type="checkbox" name="rememberme" id="rememberme">
- Remember Password
- </label>
- </div>
- <div class="form-group">
- <button type="button" class="full-btn" onclick="window.open('countdown.html');">Log in</button>
- </div>
- <p>Not Registered? <a href="anokha_registration.html">Sign Up</a></p>
- <p>Wanna go home?? <a href="../index.html">Home</a></p>
- </form>
- </div>
- </div>
-  <p align="center">Author: Basi Reddy Rohith Reddy<br></p>
-  <p align="center">Email: rohithreddybasireddy@gmail.com</p>
+	<h1 align="center" style="color:#F06292">Anokha Login</h1>
+	<div class="container">
+		<div class="login-box">
+			<div class="user-icon">
+				<i class="far fa-user"></i>
+			</div>
+			<form class="login">
+				<div class="form-group">
+					<input type="text" placeholder="University Email ID" id="username" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<input type="password" placeholder="Password" id="password" class="form-control" required>
+				</div>
+				<div class="form-group">
+					<label for="rememberme">
+					<input type="checkbox" name="rememberme" id="rememberme">
+						Remember Password
+					</label>
+				</div>
+				<div class="form-group">
+					<button type="button" class="full-btn" onclick="window.open('countdown.html');">Log in</button>
+				</div>
+
+				<div class="form-group">
+					<button type="button" class="full-btn" onclick="window.open('anokha_registration.html','_self');">Sign Up</button>
+				</div>
+				
+				<p>Wanna go home?? <a href="../index.html">Home</a></p>
+			</form>
+		</div>
+	</div>
+	<footer>
+		<p>Copyright © 2022 - TIFAC-CORE in Cyber Security.<br>
+        Design by Basi Reddy Rohith Reddy, II B.Tech CSE (CYS)<br>
+		Part of 20CYS202 - User Interface Design<br>
+		Amrita Vishwa Vidyapeetham, Coimbatore</p>
+	</footer>
 </body>
 </html>
